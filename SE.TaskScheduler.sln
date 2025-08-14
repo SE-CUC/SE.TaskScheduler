@@ -5,6 +5,14 @@ VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE.TaskScheduler", "SE.TaskScheduler\SE.TaskScheduler.csproj", "{E47C00F5-C615-456A-8BFD-C061D3196103}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.TaskScheduler.Mixin", "SE.TaskScheduler.Mixin\SE.TaskScheduler.Mixin.shproj", "{8A3CDCC5-4B55-4D87-A415-698A0E1FF06F}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.Logging.Mixin", "..\SE.Logging\SE.Logging.Mixin\SE.Logging.Mixin.shproj", "{697B1545-807C-420A-94EE-17FB6D5CD7F2}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.LiveTicksUsage.Mixin", "..\SE.LiveTicksUsage\SE.LiveTicksUsage.Mixin\SE.LiveTicksUsage.Mixin.shproj", "{C8722C00-499F-46C1-9205-6851F169B433}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.Configuration.Mixin", "..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.shproj", "{C6BB2864-2F9A-4D47-BF5B-3D48CE2971ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,5 +29,15 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BBC7C45E-2C5C-4900-A9D7-9BA3297319DE}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\SE.Logging\SE.Logging.Mixin\SE.Logging.Mixin.projitems*{697b1545-807c-420a-94ee-17fb6d5cd7f2}*SharedItemsImports = 13
+		SE.TaskScheduler.Mixin\SE.TaskScheduler.Mixin.projitems*{8a3cdcc5-4b55-4d87-a415-698a0e1ff06f}*SharedItemsImports = 13
+		..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{c6bb2864-2f9a-4d47-bf5b-3d48ce2971ed}*SharedItemsImports = 13
+		..\SE.LiveTicksUsage\SE.LiveTicksUsage.Mixin\SE.LiveTicksUsage.Mixin.projitems*{c8722c00-499f-46c1-9205-6851f169b433}*SharedItemsImports = 13
+		..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
+		..\SE.LiveTicksUsage\SE.LiveTicksUsage.Mixin\SE.LiveTicksUsage.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
+		..\SE.Logging\SE.Logging.Mixin\SE.Logging.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
+		SE.TaskScheduler.Mixin\SE.TaskScheduler.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

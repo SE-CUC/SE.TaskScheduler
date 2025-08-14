@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netframework48</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <RootNamespace>IngameScript</RootNamespace>
     <LangVersion>6</LangVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -23,4 +23,8 @@
     <AdditionalFiles Include="Instructions.readme" />
     <AdditionalFiles Include="thumb.png" />
   </ItemGroup>
+  <Import Project="..\SE.TaskScheduler.Mixin\SE.TaskScheduler.Mixin.projitems" Label="Shared" />
+  <Import Project="..\..\SE.Logging\SE.Logging.Mixin\SE.Logging.Mixin.projitems" Label="Shared" />
+  <Import Project="..\..\SE.LiveTicksUsage\SE.LiveTicksUsage.Mixin\SE.LiveTicksUsage.Mixin.projitems" Label="Shared" />
+  <Import Project="..\..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems" Label="Shared" />
 </Project>

@@ -1,72 +1,73 @@
-﻿using System;
+﻿using Sandbox.ModAPI.Ingame;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
 using System.Text;
-using Sandbox.Game.EntityComponents;
-using Sandbox.ModAPI.Ingame;
-using Sandbox.ModAPI.Interfaces;
-using SpaceEngineers.Game.ModAPI.Ingame;
-using VRage;
-using VRage.Collections;
-using VRage.Game;
-using VRage.Game.Components;
 using VRage.Game.GUI.TextPanel;
-using VRage.Game.ModAPI.Ingame;
-using VRage.Game.ModAPI.Ingame.Utilities;
-using VRage.Game.ObjectBuilders.Definitions;
-using VRageMath;
 
 namespace IngameScript
 {
     partial class Program : MyGridProgram
     {
-        // This file contains your actual script.
-        //
-        // You can either keep all your code here, or you can create separate
-        // code files to make your program easier to navigate while coding.
-        //
-        // Go to:
-        // https://github.com/malware-dev/MDK-SE/wiki/Quick-Introduction-to-Space-Engineers-Ingame-Scripts
-        //
-        // to learn more about ingame scripts.
+        private readonly ILogger _logger;
+        private readonly ISchedulerService _scheduler;
+        private readonly SystemMonitorService _monitorService;
 
         public Program()
         {
-            // The constructor, called only once every session and
-            // always before any other method is called. Use it to
-            // initialize your script. 
-            //     
-            // The constructor is optional and can be removed if not
-            // needed.
-            // 
-            // It's recommended to set Runtime.UpdateFrequency 
-            // here, which will allow your script to run itself without a 
-            // timer block.
-        }
+            _monitorService = new SystemMonitorService(this);
 
-        public void Save()
-        {
-            // Called when the program needs to save its state. Use
-            // this method to save your state to the Storage field
-            // or some other means. 
-            // 
-            // This method is optional and can be removed if not
-            // needed.
+            _logger = new Logger(LogLevel.Debug);
+
+            var logSurface = Me.GetSurface(0);
+            logSurface.ContentType = VRage.Game.GUI.TextPanel.ContentType.TEXT_AND_IMAGE;
+            logSurface.FontSize = 0.5f;
+            logSurface.Alignment = VRage.Game.GUI.TextPanel.TextAlignment.LEFT;
+            _logger.AddTarget(new SurfaceTarget(logSurface));
+
+            _logger.AddTarget(new EchoTarget(Echo));
+
+            _scheduler = new SchedulerService(_logger);
+            _logger.Info("Scheduler service initialized.");
+
+            SetupTasks();
+
+            Runtime.UpdateFrequency = UpdateFrequency.Update10;
+
+            Echo("Scheduler is running. 100 parallel tasks with fake load initiated.");
+            _logger.Info("--- Script startup complete ---");
         }
 
         public void Main(string argument, UpdateType updateSource)
         {
-            // The main entry point of the script, invoked every time
-            // one of the programmable block's Run actions are invoked,
-            // or the script updates itself. The updateSource argument
-            // describes where the update came from. Be aware that the
-            // updateSource is a  bitfield  and might contain more than 
-            // one update type.
-            // 
-            // The method itself is required, but the arguments above
-            // can be removed if not needed.
+            _monitorService.PrintStatsToEcho();
+
+            _scheduler.Tick();
+
+            _logger.Flush();
+        }
+
+        private void SetupTasks()
+        {
+            _logger.Info("Setting up initial tasks...");
+
+            for (int i = 0; i < 100; i++)
+            {
+                _scheduler.AddTask(TaskType.Parallel, OneOffParallelTaskWithLoad($"Parallel-{i}", 3));
+            }
+
+            _logger.Info("100 parallel tasks with fake load have been scheduled.");
+        }
+
+        private IEnumerator OneOffParallelTaskWithLoad(string name, int steps)
+        {
+            for (int i = 0; i < steps; i++)
+            {
+                _logger.Info($"<{name}> Parallel step {i + 1}/{steps}.");
+
+                yield return CoroutineHelpers.Wait(1);
+            }
+            _logger.Info($"<{name}> finished.");
         }
     }
 }
