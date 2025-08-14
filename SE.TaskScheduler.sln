@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE.TaskScheduler", "SE.TaskScheduler\SE.TaskScheduler.csproj", "{E47C00F5-C615-456A-8BFD-C061D3196103}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E47C00F5-C615-456A-8BFD-C061D3196103}.Debug|x64.ActiveCfg = Debug|x64
+		{E47C00F5-C615-456A-8BFD-C061D3196103}.Debug|x64.Build.0 = Debug|x64
+		{E47C00F5-C615-456A-8BFD-C061D3196103}.Release|x64.ActiveCfg = Release|x64
+		{E47C00F5-C615-456A-8BFD-C061D3196103}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBC7C45E-2C5C-4900-A9D7-9BA3297319DE}
+	EndGlobalSection
+EndGlobal
