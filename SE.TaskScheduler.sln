@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1 d17.14
+VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE.TaskScheduler", "SE.TaskScheduler\SE.TaskScheduler.csproj", "{E47C00F5-C615-456A-8BFD-C061D3196103}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.LiveTicksUsage.Mixin", "..\SE.LiveTicksUsage\SE.LiveTicksUsage.Mixin\SE.LiveTicksUsage.Mixin.shproj", "{C8722C00-499F-46C1-9205-6851F169B433}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.Configuration.Mixin", "..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.shproj", "{C6BB2864-2F9A-4D47-BF5B-3D48CE2971ED}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.SEApplication.Mixin", "..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.shproj", "{60062648-C770-427E-8C66-95F0D8761E57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +31,17 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{697B1545-807C-420A-94EE-17FB6D5CD7F2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C8722C00-499F-46C1-9205-6851F169B433} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C6BB2864-2F9A-4D47-BF5B-3D48CE2971ED} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{60062648-C770-427E-8C66-95F0D8761E57} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BBC7C45E-2C5C-4900-A9D7-9BA3297319DE}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.projitems*{60062648-c770-427e-8c66-95f0d8761e57}*SharedItemsImports = 13
 		..\SE.Logging\SE.Logging.Mixin\SE.Logging.Mixin.projitems*{697b1545-807c-420a-94ee-17fb6d5cd7f2}*SharedItemsImports = 13
 		SE.TaskScheduler.Mixin\SE.TaskScheduler.Mixin.projitems*{8a3cdcc5-4b55-4d87-a415-698a0e1ff06f}*SharedItemsImports = 13
 		..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{c6bb2864-2f9a-4d47-bf5b-3d48ce2971ed}*SharedItemsImports = 13
@@ -38,6 +49,7 @@ Global
 		..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 		..\SE.LiveTicksUsage\SE.LiveTicksUsage.Mixin\SE.LiveTicksUsage.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 		..\SE.Logging\SE.Logging.Mixin\SE.Logging.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
+		..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 		SE.TaskScheduler.Mixin\SE.TaskScheduler.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
