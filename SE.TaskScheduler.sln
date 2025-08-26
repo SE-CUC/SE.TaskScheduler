@@ -17,6 +17,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.SEApplication.Mixin", ".
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SE.SEApplication.TaskSchedulerExtension.Mixin", "SE.SEApplication.TaskSchedulerExtension.Mixin\SE.SEApplication.TaskSchedulerExtension.Mixin.shproj", "{96639851-D7B4-4F0C-8380-27A5A5116E8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -44,12 +46,14 @@ Global
 		..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.projitems*{60062648-c770-427e-8c66-95f0d8761e57}*SharedItemsImports = 13
 		..\SE.Logging\SE.Logging.Mixin\SE.Logging.Mixin.projitems*{697b1545-807c-420a-94ee-17fb6d5cd7f2}*SharedItemsImports = 13
 		SE.TaskScheduler.Mixin\SE.TaskScheduler.Mixin.projitems*{8a3cdcc5-4b55-4d87-a415-698a0e1ff06f}*SharedItemsImports = 13
+		SE.SEApplication.TaskSchedulerExtension.Mixin\SE.SEApplication.TaskSchedulerExtension.Mixin.projitems*{96639851-d7b4-4f0c-8380-27a5a5116e8b}*SharedItemsImports = 13
 		..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{c6bb2864-2f9a-4d47-bf5b-3d48ce2971ed}*SharedItemsImports = 13
 		..\SE.LiveTicksUsage\SE.LiveTicksUsage.Mixin\SE.LiveTicksUsage.Mixin.projitems*{c8722c00-499f-46c1-9205-6851f169b433}*SharedItemsImports = 13
 		..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 		..\SE.LiveTicksUsage\SE.LiveTicksUsage.Mixin\SE.LiveTicksUsage.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 		..\SE.Logging\SE.Logging.Mixin\SE.Logging.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 		..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
+		SE.SEApplication.TaskSchedulerExtension.Mixin\SE.SEApplication.TaskSchedulerExtension.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 		SE.TaskScheduler.Mixin\SE.TaskScheduler.Mixin.projitems*{e47c00f5-c615-456a-8bfd-c061d3196103}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

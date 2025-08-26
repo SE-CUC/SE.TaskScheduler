@@ -9,11 +9,6 @@
     <Import_RootNamespace>IngameScript</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Enums\TaskPriority.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Enums\TaskType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Interfaces\ISchedulerService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Models\MyTask.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\SchedulerService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utils\CoroutineHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TaskSchedulerExtensions.cs" />
   </ItemGroup>
 </Project>

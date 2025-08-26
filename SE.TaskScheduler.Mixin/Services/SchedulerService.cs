@@ -31,6 +31,12 @@ namespace IngameScript
             _logger = logger;
         }
 
+        public long AddTask(MyTask myTask)
+        {
+            if (myTask == null) return -1;
+            return AddTask(myTask.Type, myTask.Task, myTask.Priority);
+        }
+
         public long AddTask(TaskType type, IEnumerator task, TaskPriority priority = TaskPriority.Normal)
         {
             if (task == null) return -1;

@@ -28,4 +28,5 @@
   <Import Project="..\..\SE.LiveTicksUsage\SE.LiveTicksUsage.Mixin\SE.LiveTicksUsage.Mixin.projitems" Label="Shared" />
   <Import Project="..\..\SE.Configuration\SE.Configuration.Mixin\SE.Configuration.Mixin.projitems" Label="Shared" />
   <Import Project="..\..\SE.SEApplication\SE.SEApplication.Mixin\SE.SEApplication.Mixin.projitems" Label="Shared" />
+  <Import Project="..\SE.SEApplication.TaskSchedulerExtension.Mixin\SE.SEApplication.TaskSchedulerExtension.Mixin.projitems" Label="Shared" />
 </Project>
